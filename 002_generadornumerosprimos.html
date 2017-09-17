@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generador Números Primos</title>
+	<script type="text/javascript">
+		var nprimos=100;
+		function primos(){
+
+
+			for (var i = 1; i<=nprimos ; i++){
+				// console.log("valor i", i)
+				var primo = true;
+				for (var k = 2 ; k< i ; k++ ){
+					if(i % k == 0){
+						var primo = false;	
+					}
+					
+				}
+				if(primo){
+					 // i = i.toString();
+					
+					var item = document.createElement('li');
+					document.getElementById("numprimos").appendChild(item);
+					item.innerHTML = i;
+					
+					// console.log(i)
+					}
+			}
+
+		}
+
+	</script>
+
+</head>
+<body >
+
+	<button onclick="primos()">Generar Núm Primos</button>
+
+	<div id="numprimos">
+		
+	</div>
+
+
+
+</body>
+</html>
