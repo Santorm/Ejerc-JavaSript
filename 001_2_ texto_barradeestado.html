@@ -1,0 +1,62 @@
+	
+<HTML>
+	<HEAD>
+		<style type="text/css">
+
+			#texto{
+				width: 500px;
+				margin: auto;
+				border: solid 1px red;
+			}
+
+		</style>
+		<SCRIPT LANGUAGE="JavaScript">
+			<!-- 
+			var scrtxt="Este es el texto que se va moviendo por la pantalla...";
+			var lentxt=scrtxt.length;
+			var width=100;
+			var pos=0;
+			function scroll() {
+				//pos es un contador
+				pos++;
+				var scroller="";
+
+				if(pos == lentxt+width){
+					pos = 0;
+				}
+
+				if(pos<width){
+
+					for(var i = 0 ; i <= (width-pos) ; i++){
+						scroller = scroller+ '&nbsp;';
+						// console.log(scroller)
+
+					}
+					// console.log('pos anes'+pos)
+					scroller=scroller+scrtxt.substring(0, pos);
+					// console.log(scroller)
+
+				}else{
+					// console.log('pos'+pos)
+
+				 	scroller=scroller+scrtxt.substring(pos-width, pos);
+
+				 }
+
+
+				// var scroller=scrtxt.substring(pos, pos+1);
+				
+
+				
+				// window.status = scroller;
+				document.getElementById("texto").innerHTML=scroller;
+				setTimeout("scroll()",100); /*función que repite su elecuta su primer argumento cada vez que transcurre el tiemp indicado en su segundo argumento (milisegundos) */
+			}
+	//-->
+</SCRIPT>
+</HEAD>
+<BODY onLoad="scroll();return true;">
+	Ejercicio 1 JavaScript. Texto que recorre la pantalla;
+	<div id="texto"></div>
+</BODY>
+</HTML>
