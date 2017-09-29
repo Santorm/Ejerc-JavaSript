@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reemplazo de un texto por otro utilizando callbacks</title>
+</head>
+
+<script>
+
+// esta es una función que retorn a ala vez otra función.
+// Sirve para crear un template en el que la función reemplazar
+// toma dos terminos cualquiera (original, reemplazo)
+// para despues poder pasar cualquier texto como tercer parámetro y que realice el reemplazo.
+
+// ejercicio sacado de https://medium.com/entendiendo-javascript/funciones-de-alto-orden-en-javascript-42d04769d9b5
+// conceptos js relacionados: funciones de primer orden, callbacks, calculo lambda, closures...
+
+//complementos: para poder realizar un reemplazo más preciso hay que revisar expresiones regulares 
+
+let reemplazar = function(original, reemplazo){
+	return (texto) => texto.replace(original, reemplazo) 
+}
+
+const reemplazarAprovadoPorSuspenso = reemplazar('aprovado', 'suspenso');
+const reemplazarNombrePorApodo = reemplazar('Santiago', 'Santo');
+
+var text1 = reemplazarAprovadoPorSuspenso("El alumno con una nota menor a 5 será aprovado");
+var text2 = reemplazarNombrePorApodo("El alumno Santiago Rueda ha cumplido con éxito el ejercicio");
+
+console.log(text1);
+console.log(text2); 
+
+
+//consola:
+
+//El alumno con una nota menor a 5 será suspenso
+//El alumno Santo Rueda ha cumplido con éxito el ejercicio
+
+
+</script>
+<body>
+
+</body>
+</html>
